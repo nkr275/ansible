@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install java
+      apt:
+        name: openjdk-8-jdk
+        update_cache: yes
+        state: present
+    - name: install apache
+      apt:
+        name: tree
+        state: present
